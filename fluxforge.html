@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://checkoutmyvibes.com/methodology/index.html -->
+<html lang="en" data-theme="cocoa"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FLUXFORGE™ Method - How I Build | Thomas R. Lee</title>
+  <meta name="description" content="Thomas R. Lee (TRL) - FLUXFORGE™ Method: build fast, feel real, prove outcomes, harden into products. 200+ apps built with AI-assisted rapid development.">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FLUXFORGE™ Method - How I Build">
+  <meta property="og:description" content="Build fast, feel real, prove outcomes, harden into products. 200+ apps built with AI-assisted rapid development.">
+  <meta property="og:url" content="https://checkoutmyvibes.com/methodology/">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 100 100&#39;&gt;&lt;text y=&#39;.9em&#39; font-size=&#39;90&#39;&gt;%E2%9A%A1&lt;/text&gt;&lt;/svg&gt;">
+
+  <style>
+    :root{
+      --bg0:#06070c;
+      --bg1:#0b0e18;
+
+      --ink:#eef1ff;
+      --muted:#b6bddc;
+      --muted2:#8790b8;
+
+      --cardTop: rgba(255,255,255,.09);
+      --cardBot: rgba(255,255,255,.03);
+      --cardFill: rgba(10,12,18,.62);
+
+      --line: rgba(255,255,255,.14);
+      --line2: rgba(255,255,255,.09);
+
+      --shadowA: 0 28px 70px rgba(0,0,0,.55);
+      --shadowB: 0 14px 30px rgba(0,0,0,.45);
+
+      --radius: 18px;
+      --radius2: 14px;
+
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+      --bgRadA: rgba(70,120,255,.16);
+      --bgRadB: rgba(167,255,90,.12);
+      --bgRadC: rgba(255,210,74,.10);
+
+      --methodInk:#a7ff5a;
+      --methodGlow: rgba(167,255,90,.28);
+
+      --tA: rgba(70,120,255,.55);
+      --tB: rgba(167,255,90,.45);
+      --tC: rgba(255,210,74,.45);
+
+      --secA: rgba(70,120,255,.18);
+      --secB: rgba(167,255,90,.14);
+      --secC: rgba(255,210,74,.13);
+      --secD: rgba(125,211,255,.13);
+
+      --glassBg: rgba(255,255,255,.07);
+      --glassBg2: rgba(0,0,0,.10);
+      --glassBorder: rgba(255,255,255,.18);
+      --glassHighlight: rgba(255,255,255,.10);
+
+      --noiseOpacity: .10;
+      --stripeOpacity: .07;
+      --spotOpacity: .14;
+
+      --babyBlue: #98d9ff;
+      --coral: #ff6b6b;
+      --gold: #ffd24a;
+    }
+
+    :root[data-theme="graphite"]{
+      --bg0:#060607; --bg1:#101216;
+      --ink:#f2f4ff; --muted:#c2c7de; --muted2:#8e96b9;
+      --cardFill: rgba(15,16,20,.66);
+      --bgRadA: rgba(125,211,255,.16);
+      --bgRadB: rgba(167,255,90,.10);
+      --bgRadC: rgba(255,210,74,.08);
+      --methodInk:#7dd3ff;
+      --methodGlow: rgba(125,211,255,.22);
+      --tA: rgba(125,211,255,.52);
+      --tB: rgba(210,210,230,.18);
+      --tC: rgba(255,210,74,.35);
+      --secA: rgba(125,211,255,.16);
+      --secB: rgba(210,210,230,.10);
+      --secC: rgba(255,210,74,.10);
+      --secD: rgba(255,90,122,.10);
+      --noiseOpacity: .12;
+      --stripeOpacity: .08;
+      --spotOpacity: .10;
+    }
+
+    :root[data-theme="forest"]{
+      --bg0:#06100b; --bg1:#071a12;
+      --ink:#ecfff6; --muted:#bfe6d5; --muted2:#86baa3;
+      --cardFill: rgba(6,20,14,.66);
+      --bgRadA: rgba(60,255,180,.14);
+      --bgRadB: rgba(167,255,90,.11);
+      --bgRadC: rgba(125,211,255,.08);
+      --methodInk:#3cffb4;
+      --methodGlow: rgba(60,255,180,.22);
+      --tA: rgba(60,255,180,.48);
+      --tB: rgba(167,255,90,.34);
+      --tC: rgba(255,210,74,.30);
+      --secA: rgba(60,255,180,.16);
+      --secB: rgba(167,255,90,.12);
+      --secC: rgba(125,211,255,.10);
+      --secD: rgba(255,210,74,.10);
+      --noiseOpacity: .11;
+      --stripeOpacity: .06;
+      --spotOpacity: .12;
+    }
+
+    :root[data-theme="royal"]{
+      --bg0:#07061a; --bg1:#10103a;
+      --ink:#f1f0ff; --muted:#c7c3ff; --muted2:#a09bf0;
+      --cardFill: rgba(12,10,34,.66);
+      --bgRadA: rgba(144,114,255,.18);
+      --bgRadB: rgba(125,211,255,.12);
+      --bgRadC: rgba(255,210,74,.10);
+      --methodInk:#ffd24a;
+      --methodGlow: rgba(255,210,74,.20);
+      --tA: rgba(144,114,255,.55);
+      --tB: rgba(125,211,255,.34);
+      --tC: rgba(255,210,74,.38);
+      --secA: rgba(144,114,255,.18);
+      --secB: rgba(125,211,255,.12);
+      --secC: rgba(255,210,74,.12);
+      --secD: rgba(167,255,90,.10);
+      --noiseOpacity: .09;
+      --stripeOpacity: .09;
+      --spotOpacity: .14;
+    }
+
+    :root[data-theme="cocoa"]{
+      --bg0:#0f0906; --bg1:#1a120d;
+      --ink:#fff3e9; --muted:#e6c9b1; --muted2:#b5937b;
+      --cardFill: rgba(24,16,12,.66);
+      --bgRadA: rgba(255,210,74,.14);
+      --bgRadB: rgba(167,255,90,.10);
+      --bgRadC: rgba(125,211,255,.08);
+      --methodInk:#ffd24a;
+      --methodGlow: rgba(255,210,74,.20);
+      --tA: rgba(255,210,74,.48);
+      --tB: rgba(255,140,70,.22);
+      --tC: rgba(167,255,90,.28);
+      --secA: rgba(255,210,74,.14);
+      --secB: rgba(255,140,70,.10);
+      --secC: rgba(125,211,255,.10);
+      --secD: rgba(167,255,90,.10);
+      --noiseOpacity: .10;
+      --stripeOpacity: .07;
+      --spotOpacity: .12;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--ink);
+      background:
+        radial-gradient(1100px 680px at 18% 12%, var(--bgRadA), transparent 58%),
+        radial-gradient(900px 640px at 84% 22%, var(--bgRadB), transparent 58%),
+        radial-gradient(920px 700px at 60% 88%, var(--bgRadC), transparent 62%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    .bgFX{
+      position:fixed; inset:0;
+      pointer-events:none;
+      z-index:-1;
+      opacity:1;
+    }
+    .bgFX:before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        repeating-linear-gradient(
+          135deg,
+          rgba(255,255,255,var(--stripeOpacity)) 0px,
+          rgba(255,255,255,var(--stripeOpacity)) 1px,
+          transparent 1px,
+          transparent 14px
+        );
+      mix-blend-mode: overlay;
+      opacity: .55;
+    }
+    .bgFX:after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(900px 600px at 20% 30%, rgba(255,255,255,var(--spotOpacity)), transparent 70%),
+        radial-gradient(800px 520px at 85% 20%, rgba(255,255,255,calc(var(--spotOpacity) * .8)), transparent 70%),
+        radial-gradient(700px 520px at 60% 85%, rgba(255,255,255,calc(var(--spotOpacity) * .65)), transparent 72%);
+      mix-blend-mode: overlay;
+      opacity:.35;
+    }
+
+    .wrap{max-width:1100px; margin:0 auto; padding:22px 18px 80px}
+
+    .intro{
+      position:fixed; inset:0; background:#000; z-index:99999;
+      display:grid; place-items:center;
+      opacity:1; pointer-events:auto;
+      transition: opacity .45s ease;
+    }
+    .introInner{
+      width:min(520px, 86vw);
+      text-align:center;
+      transform: translateY(6px);
+      opacity:0;
+      animation: introPhases 3.0s ease-in-out forwards;
+    }
+    @keyframes introPhases{
+      0%   {opacity:0; transform:translateY(10px) scale(.98)}
+      18%  {opacity:1; transform:translateY(0px)  scale(1)}
+      55%  {opacity:1; transform:translateY(0px)  scale(1)}
+      82%  {opacity:0; transform:translateY(-6px) scale(.99)}
+      100% {opacity:0; transform:translateY(-6px) scale(.99)}
+    }
+    .introTitle{
+      margin-top:14px;
+      font-weight:1000;
+      letter-spacing:.14em;
+      font-size:12px;
+      color: rgba(255,255,255,.82);
+      font-family: var(--mono);
+      text-transform:uppercase;
+    }
+    .introFadeOut{ opacity:0; pointer-events:none; }
+
+    .stage{
+      opacity:0;
+      transform: translateY(12px);
+      animation: stageIn 0.62s cubic-bezier(.2,.9,.2,1) forwards;
+      will-change: opacity, transform;
+    }
+    @keyframes stageIn{ to{opacity:1; transform: translateY(0)} }
+    .stage{ animation-delay: var(--delay, 0s); }
+
+    .lifted{
+      border:1px solid var(--line2);
+      background:
+        linear-gradient(180deg, var(--cardTop), rgba(255,255,255,0)),
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.07)),
+        var(--cardFill);
+      box-shadow: var(--shadowA), 0 2px 0 rgba(255,255,255,.06) inset;
+      border-radius: 18px;
+      overflow:hidden;
+      position:relative;
+    }
+    .lifted:after{
+      content:"";
+      position:absolute; inset:0;
+      border-radius: inherit;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.04) inset,
+        0 1px 0 rgba(255,255,255,.06) inset;
+      pointer-events:none;
+      opacity:.9;
+    }
+    .lifted:before{
+      content:"";
+      position:absolute;
+      inset:-90px -90px auto auto;
+      width:260px; height:220px;
+      filter: blur(14px);
+      pointer-events:none;
+      opacity:.95;
+      transform: rotate(10deg);
+      background: radial-gradient(circle at 30% 30%, var(--secA), transparent 68%);
+    }
+    .variantB:before{ background: radial-gradient(circle at 30% 30%, var(--secB), transparent 68%); }
+    .variantC:before{ background: radial-gradient(circle at 30% 30%, var(--secC), transparent 68%); }
+    .variantD:before{ background: radial-gradient(circle at 30% 30%, var(--secD), transparent 68%); }
+
+    header{ padding:26px 18px 18px; }
+    .topRow{ display:flex; gap:14px; align-items:flex-start; flex-wrap:wrap; position:relative; }
+    .brandNote{display:flex; align-items:flex-start; gap:14px; min-width:min(760px, 100%); padding-right: 210px; }
+
+    .brandRight{
+      position:absolute;
+      top:6px;
+      right:10px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:8px;
+      z-index:5;
+      pointer-events:none;
+    }
+    .brandRight .methodBadge{ pointer-events:auto; }
+    .brandRight .ornamentTopRight{
+      width:160px;
+      height:auto;
+      opacity:.98;
+      filter: drop-shadow(0 16px 24px rgba(0,0,0,.45));
+      display:block;
+      pointer-events:auto;
+    }
+
+    .logoWrap{ flex:0 0 auto; }
+    .logo{
+      width:52px; height:52px; border-radius:16px;
+      position:relative;
+      border:1px solid rgba(255,255,255,.18);
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255,255,255,.18), transparent 58%),
+        radial-gradient(circle at 70% 75%, rgba(255,255,255,.10), transparent 62%),
+        linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.03));
+      box-shadow:
+        0 28px 65px rgba(0,0,0,.62),
+        0 12px 22px rgba(0,0,0,.44),
+        0 2px 0 rgba(255,255,255,.06) inset;
+      display:grid;
+      place-items:center;
+      font-weight:1000;
+      letter-spacing:.12em;
+      font-size:13px;
+      color:rgba(255,255,255,.95);
+      text-shadow: 0 18px 30px rgba(0,0,0,.55);
+    }
+    .logoPlate{
+      width:56px; height:16px;
+      margin: -8px auto 0;
+      border-radius: 999px;
+      background: radial-gradient(circle at 50% 50%, rgba(0,0,0,.62), transparent 72%);
+      filter: blur(1px);
+      opacity:.95;
+    }
+
+    .hgroup{min-width:0}
+    .hgroup h1{
+      margin:0;
+      font-size:18px;
+      letter-spacing:.2px;
+      line-height:1.15;
+      word-break: break-word;
+    }
+    @media (min-width: 920px){ .hgroup h1{font-size:20px} }
+    .hgroup p{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.42;
+      max-width: 74ch;
+    }
+
+    .method{
+      color: var(--methodInk);
+      text-shadow: 0 10px 28px var(--methodGlow);
+      font-weight:1000;
+      letter-spacing:.04em;
+      white-space:nowrap;
+    }
+
+    .methodBadge{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.18);
+      color: rgba(255,255,255,.92);
+      font-weight:1000;
+      letter-spacing:.08em;
+      font-size:12px;
+      box-shadow: 0 14px 35px rgba(0,0,0,.30);
+      white-space:nowrap;
+    }
+    .methodBadge .spark{
+      width:10px;height:10px;border-radius:999px;
+      background: var(--methodInk);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.06);
+    }
+
+    .miniInfo{
+      font-family: var(--mono);
+      font-size:11px;
+      color: rgba(255,255,255,.70);
+      opacity:.9;
+      margin-top:10px;
+    }
+
+    .ornament{
+      width:170px;
+      max-width: 60vw;
+      height:auto;
+      opacity:.98;
+      filter: drop-shadow(0 18px 28px rgba(0,0,0,.45));
+    }
+
+    .kpiRow{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
+      margin-top:14px;
+      align-items:stretch;
+    }
+    .kpi{
+      grid-column: span 12;
+      padding:14px 14px;
+      border-radius: 14px;
+      border:1px solid var(--glassBorder);
+      background:
+        linear-gradient(180deg, var(--glassHighlight), rgba(255,255,255,0)),
+        linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.16)),
+        linear-gradient(135deg, var(--glassBg), var(--glassBg2));
+      box-shadow:
+        0 18px 35px rgba(0,0,0,.35),
+        0 2px 0 rgba(255,255,255,.05) inset,
+        0 0 0 1px rgba(255,255,255,.04) inset;
+      overflow:hidden;
+      min-width:0;
+      position:relative;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .kpi:before{
+      content:"";
+      position:absolute;
+      inset:-90px -90px auto auto;
+      width:260px;height:220px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.12), transparent 66%);
+      filter: blur(14px);
+      opacity:.55;
+      pointer-events:none;
+    }
+    .kpi:after{
+      content:"";
+      position:absolute; left:-1px; top:-1px; bottom:-1px; width:6px;
+      background: linear-gradient(180deg, var(--tA), rgba(255,255,255,0));
+      opacity:.45;
+      pointer-events:none;
+    }
+    @media (min-width: 620px){ .kpi{grid-column: span 6} }
+    @media (min-width: 920px){ .kpi{grid-column: span 3} }
+    .kpi .label{
+      font-size:11px;
+      color: rgba(255,255,255,.70);
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      position:relative;
+      z-index:1;
+    }
+    .kpi .value{
+      margin-top:7px;
+      font-weight:1000;
+      font-size:14px;
+      display:flex;
+      gap:8px;
+      align-items:flex-start;
+      flex-wrap:wrap;
+      min-width:0;
+      line-height:1.25;
+      word-break:break-word;
+      position:relative;
+      z-index:1;
+    }
+    .chip{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.05);
+      color: rgba(255,255,255,.78);
+      font-size:12px;
+      font-weight:900;
+      white-space:normal;
+      max-width:100%;
+      word-break:break-word;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .chip b{color:rgba(255,255,255,.95)}
+    .chip .mini{
+      width:9px;height:9px;border-radius:999px;
+      background: var(--methodInk);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.06);
+      flex:0 0 auto;
+    }
+
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media (min-width: 980px){
+      .grid{grid-template-columns: 1.1fr .9fr}
+    }
+
+    .cardHead{
+      padding:16px 16px 12px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      border-bottom:1px solid var(--line2);
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,0));
+      position:relative;
+      z-index:1;
+    }
+    .cardHead h2{ margin:0; font-size:15px; letter-spacing:.2px; }
+    .cardHead p{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+      max-width: 100ch;
+    }
+    .cardBody{ padding:14px 16px 16px; position:relative; z-index:1; }
+
+    .pillRow{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .pill{
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      font-size:12px;
+      color: rgba(255,255,255,.78);
+      font-weight:900;
+      box-shadow: 0 2px 0 rgba(255,255,255,.05) inset;
+    }
+    .pill.tint{
+      border-color: rgba(255,255,255,.18);
+      background: linear-gradient(135deg, rgba(255,255,255,.04), rgba(0,0,0,.16));
+      box-shadow: 0 0 0 1px rgba(255,255,255,.03) inset, 0 12px 22px rgba(0,0,0,.18);
+    }
+    .pill.tint:before{
+      content:"";
+      display:inline-block;
+      width:8px;height:8px;border-radius:999px;
+      margin-right:8px;
+      background: var(--tA);
+      box-shadow: 0 0 0 3px rgba(255,255,255,.06);
+      vertical-align: middle;
+      opacity:.7;
+    }
+
+    .flow{ display:grid; grid-template-columns: 1fr; gap:10px; }
+    @media (min-width: 720px){ .flow{grid-template-columns: repeat(2, 1fr)} }
+
+    .step{
+      border:1px solid var(--line2);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.10)),
+        rgba(0,0,0,.08);
+      border-radius: 14px;
+      padding:12px 12px;
+      position:relative;
+      overflow:hidden;
+      min-width:0;
+      box-shadow: var(--shadowB), 0 2px 0 rgba(255,255,255,.06) inset;
+    }
+    .step:after{
+      content:"";
+      position:absolute; left:-1px; top:-1px; bottom:-1px; width:5px;
+      background: linear-gradient(180deg, var(--tA), rgba(255,255,255,0));
+      opacity:.35;
+      pointer-events:none;
+    }
+    .step:nth-child(2):after{ background: linear-gradient(180deg, var(--tB), rgba(255,255,255,0)); }
+    .step:nth-child(3):after{ background: linear-gradient(180deg, var(--tC), rgba(255,255,255,0)); }
+    .step:nth-child(4):after{ background: linear-gradient(180deg, var(--tA), rgba(255,255,255,0)); }
+    .step:nth-child(5):after{ background: linear-gradient(180deg, var(--tB), rgba(255,255,255,0)); }
+    .step:nth-child(6):after{ background: linear-gradient(180deg, var(--tC), rgba(255,255,255,0)); }
+
+    .stepTop{ display:flex; align-items:center; gap:10px; position:relative; }
+    .num{
+      width:28px;height:28px;border-radius:10px;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      color:rgba(255,255,255,.95);
+      font-weight:1000;
+      font-size:12px;
+      box-shadow: 0 14px 26px rgba(0,0,0,.45), 0 2px 0 rgba(255,255,255,.06) inset;
+      flex:0 0 auto;
+    }
+    .step h3{ margin:0; font-size:13px; letter-spacing:.2px; }
+    .step p{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.48;
+      word-break:break-word;
+      position:relative;
+    }
+
+    details{
+      border:1px solid var(--line2);
+      border-radius: 14px;
+      background: rgba(255,255,255,.04);
+      padding:10px 12px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.22), 0 2px 0 rgba(255,255,255,.05) inset;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    details + details{margin-top:10px}
+    summary{
+      cursor:pointer;
+      font-weight:1000;
+      color:rgba(255,255,255,.95);
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary .chev{
+      width:10px;height:10px;
+      border-right:2px solid rgba(255,255,255,.85);
+      border-bottom:2px solid rgba(255,255,255,.85);
+      transform: rotate(-45deg);
+      transition: transform .14s ease;
+      opacity:.85;
+      flex:0 0 auto;
+    }
+    details[open] summary .chev{transform: rotate(45deg)}
+
+    .callout{
+      margin-top:12px;
+      border-radius: 14px;
+      border:1px dashed rgba(255,255,255,.22);
+      background: rgba(0,0,0,.16);
+      padding:12px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+      box-shadow: 0 10px 22px rgba(0,0,0,.25);
+    }
+    .callout b{color:rgba(255,255,255,.95)}
+
+    .babyBlue{
+      color: var(--babyBlue);
+      text-shadow: 0 10px 26px rgba(152,217,255,.18);
+      font-weight: 900;
+    }
+
+    .twocol{ display:grid; grid-template-columns: 1fr; gap:10px; }
+    @media (min-width: 720px){ .twocol{grid-template-columns: 1fr 1fr} }
+
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.6}
+    li{margin:6px 0}
+
+    .quote{
+      border-left:3px solid rgba(255,255,255,.24);
+      padding-left:12px;
+      margin:12px 0 0;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:13px;
+    }
+    .footer{
+      margin-top:16px;
+      color: rgba(255,255,255,.70);
+      font-size:12px;
+      text-align:center;
+      opacity:.95;
+    }
+    .watermark{
+      position:absolute;
+      right:14px; bottom:12px;
+      font-family:var(--mono);
+      color:rgba(255,255,255,.38);
+      font-size:11px;
+      pointer-events:none;
+      user-select:none;
+      z-index:2;
+    }
+
+    /* Stats row */
+    .statsRow{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+    @media (max-width: 720px){ .statsRow{grid-template-columns: repeat(2, 1fr)} }
+    .stat{
+      text-align:center;
+      padding:14px 10px;
+      border-radius:14px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line2);
+    }
+    .stat .num{
+      font-size:28px;
+      font-weight:1000;
+      color:var(--methodInk);
+      text-shadow: 0 8px 20px var(--methodGlow);
+      display:block;
+      width:auto;
+      height:auto;
+      border:none;
+      background:none;
+      box-shadow:none;
+    }
+    .stat .lbl{
+      font-size:11px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-top:4px;
+    }
+
+    /* Anti-pattern strikethrough */
+    .anti{
+      text-decoration: line-through;
+      color: var(--coral);
+      opacity:.7;
+    }
+
+    /* Case study cards */
+    .caseGrid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .caseCard{
+      border:1px solid var(--line2);
+      border-radius:14px;
+      padding:14px;
+      background:rgba(0,0,0,.12);
+      position:relative;
+      overflow:hidden;
+    }
+    .caseCard:before{
+      content:"";
+      position:absolute;
+      top:0;left:0;right:0;height:3px;
+      background: linear-gradient(90deg, var(--tA), var(--tB), var(--tC));
+      opacity:.6;
+    }
+    .caseCard h4{
+      margin:0 0 8px;
+      font-size:14px;
+      color:var(--ink);
+    }
+    .caseCard p{
+      margin:0;
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+    .caseCard .tag{
+      display:inline-block;
+      margin-top:10px;
+      padding:4px 8px;
+      border-radius:6px;
+      background:rgba(255,255,255,.06);
+      font-size:10px;
+      color:var(--muted2);
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+
+    /* CTA section */
+    .ctaSection{
+      text-align:center;
+      padding:30px 20px;
+    }
+    .ctaSection h2{
+      margin:0 0 10px;
+      font-size:20px;
+    }
+    .ctaSection p{
+      margin:0 0 20px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .ctaLinks{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .ctaBtn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:12px 20px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.18);
+      background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(0,0,0,.12));
+      color:var(--ink);
+      font-weight:900;
+      font-size:13px;
+      text-decoration:none;
+      box-shadow: 0 14px 30px rgba(0,0,0,.35);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .ctaBtn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.45);
+    }
+    .ctaBtn.primary{
+      background: linear-gradient(135deg, var(--methodInk), #8bc34a);
+      color:#000;
+      border-color: transparent;
+    }
+
+    /* Mobile header layout */
+    @media (max-width: 640px){
+      header{ padding: 20px 14px 14px; }
+      .brandRight{
+        position:absolute;
+        top:10px;
+        right:12px;
+        margin:0;
+        align-items:flex-end;
+        gap:6px;
+        pointer-events:none;
+      }
+      .brandRight .methodBadge{
+        transform: scale(.72);
+        transform-origin: top right;
+        padding: 6px 10px;
+        font-size: 11px;
+        letter-spacing: .07em;
+      }
+      .brandRight .methodBadge .spark{
+        width:9px; height:9px;
+      }
+      .brandRight .ornamentTopRight{
+        width: 118px;
+        transform: scale(.86);
+        transform-origin: top right;
+        opacity: .98;
+      }
+      .brandNote{
+        padding-right: 150px;
+        min-width: 0;
+      }
+      .hgroup h1{ font-size: 16px; }
+      .hgroup p{ font-size: 12.5px; }
+      .topRow{ gap: 10px; }
+    }
+
+    @media (max-width: 420px){
+      .brandRight{
+        top:8px;
+        right:10px;
+      }
+      .brandRight .methodBadge{
+        transform: scale(.66);
+      }
+      .brandRight .ornamentTopRight{
+        width: 108px;
+        transform: scale(.82);
+      }
+      .brandNote{
+        padding-right: 138px;
+      }
+      .logo{
+        width:50px; height:50px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .stage{opacity:1; transform:none; animation:none}
+      .intro{display:none}
+      .bgFX{display:none}
+    }
+
+    /* Theme switcher */
+    .themeSwitcher{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      z-index:100;
+      display:flex;
+      gap:6px;
+      padding:8px;
+      border-radius:14px;
+      background:rgba(0,0,0,.6);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+    }
+    .themeBtn{
+      width:24px;height:24px;
+      border-radius:8px;
+      border:2px solid transparent;
+      cursor:pointer;
+      transition: transform .15s ease;
+    }
+    .themeBtn:hover{ transform: scale(1.1); }
+    .themeBtn[data-t="cocoa"]{ background: linear-gradient(135deg, #1a120d, #ffd24a); }
+    .themeBtn[data-t="graphite"]{ background: linear-gradient(135deg, #101216, #7dd3ff); }
+    .themeBtn[data-t="forest"]{ background: linear-gradient(135deg, #071a12, #3cffb4); }
+    .themeBtn[data-t="royal"]{ background: linear-gradient(135deg, #10103a, #ffd24a); }
+    .themeBtn[data-t="midnight"]{ background: linear-gradient(135deg, #0b0e18, #a7ff5a); }
+    .themeBtn.active{ border-color: var(--methodInk); }
+  </style>
+</head>
+
+<body>
+  <div class="bgFX" aria-hidden="true"></div>
+
+  <!-- Intro Animation -->
+  <div class="intro introFadeOut" id="intro" style="display: none;">
+    <div class="introInner">
+      <svg class="ornament" viewBox="0 0 340 90" xmlns="http://www.w3.org/2000/svg" aria-label="FLUXFORGE intro ornament">
+        <defs>
+          <lineargradient id="gFixedIntro" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#a7ff5a"></stop>
+            <stop offset="0.5" stop-color="#ffd24a"></stop>
+            <stop offset="1" stop-color="#7dd3ff"></stop>
+          </lineargradient>
+          <filter id="introGlow" x="-40%" y="-80%" width="180%" height="260%">
+            <fegaussianblur stdDeviation="3.0" result="b"></fegaussianblur>
+            <femerge>
+              <femergenode in="b"></femergenode>
+              <femergenode in="SourceGraphic"></femergenode>
+            </femerge>
+          </filter>
+        </defs>
+        <g filter="url(#introGlow)">
+          <path id="introPath" d="M 20.00 70.05 Q 30.34 70.77 35.52 69.17 Q 40.69 67.58 45.86 65.11 Q 51.03 62.64 56.21 60.97 Q 61.38 59.30 66.55 59.56 Q 71.72 59.82 76.90 61.84 Q 82.07 63.85 87.24 66.26 Q 92.41 68.66 97.59 69.82 Q 102.76 70.99 107.93 70.12 Q 113.10 69.26 118.28 66.95 Q 123.45 64.64 128.62 62.46 Q 133.79 60.27 138.97 59.69 Q 144.14 59.10 149.31 60.52 Q 154.48 61.93 159.66 64.38 Q 164.83 66.83 170.00 68.67 Q 175.17 70.50 180.34 70.47 Q 185.52 70.44 190.69 68.56 Q 195.86 66.69 201.03 64.25 Q 206.21 61.80 211.38 60.44 Q 216.55 59.08 221.72 59.72 Q 226.90 60.37 232.07 62.58 Q 237.24 64.79 242.41 67.08 Q 247.59 69.36 252.76 70.17 Q 257.93 70.98 263.10 69.76 Q 268.28 68.54 273.45 66.12 Q 278.62 63.71 283.79 61.73 Q 288.97 59.75 294.14 59.55 Q 299.31 59.35 304.48 61.06 Q 309.66 62.78 314.83 65.24 T 320.00 67.71" fill="none" stroke="url(#gFixedIntro)" stroke-width="4.2" opacity="0.95"></path>
+          <circle id="introN1" cx="20.00" cy="70.05" r="6.2" fill="#a7ff5a" opacity="0.95"></circle>
+          <circle id="introN2" cx="170.00" cy="69.02" r="6.2" fill="#ffd24a" opacity="0.95"></circle>
+          <circle id="introN3" cx="320.00" cy="67.71" r="6.2" fill="#7dd3ff" opacity="0.95"></circle>
+          <path id="introBolt" d="M 212.00 31.83 L 197.00 55.83 L 216.00 55.83 L 202.00 87.83" fill="none" stroke="rgba(255,255,255,.60)" stroke-width="2.6"></path>
+        </g>
+      </svg>
+      <div class="introTitle">FLUXFORGE™</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header class="lifted stage" data-stage="" style="--delay: 0.35s;">
+      <div class="topRow">
+
+        <div class="brandRight" aria-hidden="true">
+          <span class="methodBadge"><span class="spark"></span>FLUXFORGE™</span>
+          <svg class="ornamentTopRight" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg" aria-label="FLUXFORGE wave ornament">
+            <defs>
+              <lineargradient id="gFixed" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#a7ff5a"></stop>
+                <stop offset="0.5" stop-color="#ffd24a"></stop>
+                <stop offset="1" stop-color="#7dd3ff"></stop>
+              </lineargradient>
+              <filter id="softGlow" x="-40%" y="-80%" width="180%" height="260%">
+                <fegaussianblur stdDeviation="2.6" result="b"></fegaussianblur>
+                <femerge>
+                  <femergenode in="b"></femergenode>
+                  <femergenode in="SourceGraphic"></femergenode>
+                </femerge>
+              </filter>
+            </defs>
+            <g filter="url(#softGlow)">
+              <path id="hdrPath" d="M 20.00 54.38 Q 28.89 53.96 33.33 52.42 Q 37.78 50.88 42.22 49.04 Q 46.67 47.21 51.11 46.31 Q 55.56 45.41 60.00 46.06 Q 64.44 46.70 68.89 48.45 Q 73.33 50.21 77.78 51.89 Q 82.22 53.57 86.67 54.06 Q 91.11 54.54 95.56 53.50 Q 100.00 52.46 104.44 50.59 Q 108.89 48.72 113.33 47.29 Q 117.78 45.85 122.22 45.81 Q 126.67 45.76 131.11 47.14 Q 135.56 48.52 140.00 50.40 Q 144.44 52.27 148.89 53.39 Q 153.33 54.50 157.78 54.10 Q 162.22 53.70 166.67 52.06 Q 171.11 50.42 175.56 48.64 Q 180.00 46.85 184.44 46.13 Q 188.89 45.40 193.33 46.22 Q 197.78 47.04 202.22 48.85 Q 206.67 50.66 211.11 52.25 Q 215.56 53.84 220.00 54.14 Q 224.44 54.44 228.89 53.25 Q 233.33 52.06 237.78 50.17 Q 242.22 48.29 246.67 46.98 Q 251.11 45.67 255.56 45.82 T 260.00 45.96" fill="none" stroke="url(#gFixed)" stroke-width="3.5" opacity="0.95"></path>
+              <circle id="hdrN1" cx="20.00" cy="54.38" r="5.5" fill="#a7ff5a" opacity="0.95"></circle>
+              <circle id="hdrN2" cx="140.00" cy="50.44" r="5.5" fill="#ffd24a" opacity="0.95"></circle>
+              <circle id="hdrN3" cx="260.00" cy="45.96" r="5.5" fill="#7dd3ff" opacity="0.95"></circle>
+              <path id="hdrBolt" d="M 173.60 21.33 L 158.60 45.33 L 177.60 45.33 L 163.60 77.33" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2.2"></path>
+            </g>
+          </svg>
+        </div>
+
+        <div class="brandNote">
+          <div class="logoWrap" aria-hidden="true">
+            <div class="logo">TRL</div>
+            <div class="logoPlate"></div>
+          </div>
+
+          <div class="hgroup">
+            <h1><span class="method" id="methodName">FLUXFORGE™</span> Method: How I Build</h1>
+            <p>Build fast, feel real, prove outcomes, harden into products.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO SECTION: Build First Architecture -->
+      <section class="lifted variantC stage" data-stage="" style="margin-top: 14px; --delay: 0.70s; border: none; box-shadow: none;">
+        <div class="cardHead" style="border:none; background:none; padding:12px 0 0;">
+          <div>
+            <h2>Build First, Understand Later Architecture</h2>
+          </div>
+        </div>
+        <div class="cardBody" style="padding:8px 0 0;">
+          I build complete, deployable systems end-to-end at lightning speed with shiny polish. Demo-first thinking.<br>
+          This page explains the <span class="method">FLUXFORGE™</span> Method.
+        </div>
+      </section>
+
+      <!-- KPI ROW -->
+      <div class="kpiRow" aria-label="Highlights">
+        <div class="kpi">
+          <div class="label">North Star</div>
+          <div class="value">
+            "As real as possible."
+            <span class="chip"><span class="mini" aria-hidden="true"></span><b>Touch-first</b> + sound + motion</span>
+          </div>
+        </div>
+
+        <div class="kpi">
+          <div class="label">Superpower</div>
+          <div class="value">
+            Rapid prototyping
+            <span class="chip"><span class="mini" aria-hidden="true"></span><b>demo-ready</b> in hours/days</span>
+          </div>
+        </div>
+
+        <div class="kpi">
+          <div class="label">Style</div>
+          <div class="value">
+            Playful + premium
+            <span class="chip"><span class="mini" aria-hidden="true"></span><b>Flux</b> energy</span>
+          </div>
+        </div>
+
+        <div class="kpi">
+          <div class="label">Outcome</div>
+          <div class="value">
+            Working product path
+            <span class="chip"><span class="mini" aria-hidden="true"></span><b>MVP → V2 → V3</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="watermark">TRL • FLUXFORGE™</div>
+    </header>
+
+    <!-- NEW: ABOUT TRL SECTION -->
+    <section class="lifted variantD stage" data-stage="" style="margin-top: 14px; --delay: 1.05s;">
+      <div class="cardHead">
+        <div>
+          <h2>About TRL (Thomas R. Lee)</h2>
+          <p>17 years of enterprise development experience. Now building the future with AI-assisted rapid development.</p>
+        </div>
+      </div>
+      <div class="cardBody">
+        <div class="statsRow">
+          <div class="stat">
+            <span class="num">200+</span>
+            <span class="lbl">Apps Built</span>
+          </div>
+          <div class="stat">
+            <span class="num">8</span>
+            <span class="lbl">Months</span>
+          </div>
+          <div class="stat">
+            <span class="num">17</span>
+            <span class="lbl">Years Exp</span>
+          </div>
+          <div class="stat">
+            <span class="num">∞</span>
+            <span class="lbl">Ideas</span>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:14px;">
+          <b>9-to-5:</b> voice bots for healthcare giants. <b>After hours:</b> computer vision games, SaaS experiments, and things that feel like they came from 2030.
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: WHY FLUXFORGE SECTION -->
+    <section class="lifted variantB stage" data-stage="" style="margin-top: 14px; --delay: 1.40s;">
+      <div class="cardHead">
+        <div>
+          <h2>Why "FluxForge"?</h2>
+          <p>The philosophy behind the name.</p>
+        </div>
+      </div>
+      <div class="cardBody">
+        <div class="twocol">
+          <div>
+            <details open="">
+              <summary><b>FLUX</b> = Constant motion <span class="chev" aria-hidden="true"></span></summary>
+              <ul>
+                <li>Ideas flow into prototypes instantly</li>
+                <li>Nothing stays static—iterate or die</li>
+                <li>Embrace change as the default state</li>
+                <li>Energy, speed, momentum over perfection</li>
+              </ul>
+            </details>
+          </div>
+          <div>
+            <details open="">
+              <summary><b>FORGE</b> = Intentional creation <span class="chev" aria-hidden="true"></span></summary>
+              <ul>
+                <li>Shape raw ideas into real products</li>
+                <li>Heat + pressure = strong foundations</li>
+                <li>Craftsmanship in the details</li>
+                <li>Build things that last</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+        <div class="quote" style="margin-top:14px;">
+          "Flux without forge is chaos. Forge without flux is stagnation. Together, they're how real products get made."
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <!-- METHODOLOGY SECTION -->
+      <section class="lifted variantA stage" data-stage="" style="--delay: 1.75s;">
+        <div class="cardHead">
+          <div>
+            <h2>Methodology: Build → Feel → Prove → Harden</h2>
+            <p>
+              I don't start with "perfect architecture." I start with a <b>real experience</b>.
+              Then I measure what works, remove friction, and evolve it into a stable system.
+            </p>
+            <div class="pillRow">
+              <span class="pill tint">Mobile-first</span>
+              <span class="pill">Instant feedback loops</span>
+              <span class="pill">Ship, then refine</span>
+              <span class="pill">Delight + humor as UX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardBody">
+          <div class="flow">
+            <div class="step">
+              <div class="stepTop"><span class="num">1</span><h3>Define the "movie trailer" experience</h3></div>
+              <p>Before features, I define the moment: what the user sees/hears/feels in the first 5–10 seconds.</p>
+            </div>
+            <div class="step">
+              <div class="stepTop"><span class="num">2</span><h3>Build the vertical slice (end-to-end)</h3></div>
+              <p>I create a working path: UI → logic → storage → output. It must feel real and complete.</p>
+            </div>
+            <div class="step">
+              <div class="stepTop"><span class="num">3</span><h3>Instrument and iterate immediately</h3></div>
+              <p>I hunt friction fast: "Where did it break? Where did it feel slow? Where did it confuse?"</p>
+            </div>
+            <div class="step">
+              <div class="stepTop"><span class="num">4</span><h3>Add "spice" (sound, motion, delight)</h3></div>
+              <p>Audio cues + micro-animations + transitions + tactile feel. "It's alive" polish.</p>
+            </div>
+            <div class="step">
+              <div class="stepTop"><span class="num">5</span><h3>Harden: reliability + security + maintainability</h3></div>
+              <p>Once proven, I lock foundations: structure, safe defaults, error handling, sanity.</p>
+            </div>
+            <div class="step">
+              <div class="stepTop"><span class="num">6</span><h3>Package: demo, share, scale</h3></div>
+              <p>Share links, screenshots, mini trailers, admin controls, analytics, roadmap.</p>
+            </div>
+          </div>
+
+          <div class="callout">
+            <b><span class="method">FLUXFORGE™</span> bias:</b>
+            <span class="babyBlue">If it doesn't run, it doesn't exist. If it runs but doesn't feel good, it won't survive.</span>
+            I optimize for <b>working + compelling</b> first, then correctness, then scale.
+          </div>
+        </div>
+      </section>
+
+      <!-- PRINCIPLES SECTION -->
+      <section class="lifted variantB stage" data-stage="" style="--delay: 2.10s;">
+        <div class="cardHead">
+          <div>
+            <h2>Principles, Stack, Outcomes</h2>
+            <p>What I aim for, what I use, and what you get at the end.</p>
+          </div>
+        </div>
+
+        <div class="cardBody">
+          <details open="">
+            <summary>Principles I build by <span class="chev" aria-hidden="true"></span></summary>
+            <ul>
+              <li><b>Touch-first &amp; responsive:</b> mobile matters; desktop is a bonus.</li>
+              <li><b>Fast feedback loops:</b> ship a version, observe, iterate.</li>
+              <li><b>Full-file clarity:</b> output complete modules so nothing is "missing."</li>
+              <li><b>Delight is functional:</b> sound/motion reduces perceived latency and boosts confidence.</li>
+              <li><b>Realism over mock:</b> permissions, camera/mic, live data, actual flows when possible.</li>
+              <li><b>Scale later:</b> evolve cleanly once the experience is proven.</li>
+            </ul>
+            <div class="quote">Make it feel like a product on day one, then we earn the right to scale it.</div>
+          </details>
+
+          <details>
+            <summary>Typical stack &amp; tools <span class="chev" aria-hidden="true"></span></summary>
+            <div class="twocol">
+              <div>
+                <div style="font-size:12px;color:rgba(255,255,255,.70);letter-spacing:.06em;text-transform:uppercase">Web / UI</div>
+                <ul>
+                  <li>HTML + CSS + Vanilla JS (Bootstrap when useful)</li>
+                  <li>Canvas / WebGL for "alive" visuals</li>
+                  <li>Audio (mp3 primary + fallbacks)</li>
+                  <li>MediaPipe for computer vision</li>
+                </ul>
+              </div>
+              <div>
+                <div style="font-size:12px;color:rgba(255,255,255,.70);letter-spacing:.06em;text-transform:uppercase">Backend / Data</div>
+                <ul>
+                  <li>PHP + MySQL for speed and deploy simplicity</li>
+                  <li>Clean endpoints, logging, schema sanity</li>
+                  <li>ElevenLabs, OpenAI, Anthropic APIs</li>
+                  <li>WebRTC for real-time features</li>
+                </ul>
+              </div>
+            </div>
+            <div class="callout">
+              <b>Hardening phase:</b> CSP-safe assets, no inline scripts/styles if required, local scripts, strict headers,
+              and tighter permission gating.
+            </div>
+          </details>
+
+          <details>
+            <summary>What the outcome looks like <span class="chev" aria-hidden="true"></span></summary>
+            <ul>
+              <li><b>Demo-ready experience:</b> intro sequence, polished interactions, legit UX flow.</li>
+              <li><b>Working features:</b> end-to-end functionality.</li>
+              <li><b>Shareable packaging:</b> links, screenshots, mini trailer, explainer.</li>
+              <li><b>Roadmap:</b> MVP → V2 polish → V3 scale (analytics, multi-user, admin, monetization).</li>
+            </ul>
+          </details>
+        </div>
+      </section>
+    </div>
+
+    <!-- BUILD LOOP SECTION -->
+    <section class="lifted variantC stage" data-stage="" style="margin-top: 14px; --delay: 2.45s;">
+      <div class="cardHead">
+        <div>
+          <h2>My Build Loop (The Actual Day-to-Day)</h2>
+          <p>This is what I do repeatedly until the thing feels inevitable.</p>
+        </div>
+      </div>
+      <div class="cardBody">
+        <div class="twocol">
+          <div>
+            <details open="">
+              <summary>Step-by-step loop <span class="chev" aria-hidden="true"></span></summary>
+              <ul>
+                <li><b>0 → Hook:</b> intro + first interaction must be fun/clear.</li>
+                <li><b>1 → Vertical slice:</b> UI → backend → DB → output.</li>
+                <li><b>2 → Reality checks:</b> mobile bugs, permissions, latency, edge cases.</li>
+                <li><b>3 → Fix &amp; regenerate:</b> rewrite the full file cleanly with the fix.</li>
+                <li><b>4 → Polish pass:</b> spacing, icons, animations, sound cues, microcopy.</li>
+                <li><b>5 → Hardening:</b> structure, security, reliability, logs, cleanup scripts.</li>
+              </ul>
+            </details>
+          </div>
+
+          <div>
+            <div style="font-size:12px;color:rgba(255,255,255,.70);letter-spacing:.06em;text-transform:uppercase">Reusable pattern</div>
+            <div style="
+              font-family:var(--mono);
+              font-size:12px;
+              color:rgba(255,255,255,.92);
+              background:rgba(0,0,0,.18);
+              border:1px solid rgba(255,255,255,.12);
+              border-radius:14px;
+              padding:12px;
+              overflow:auto;
+              box-shadow: 0 14px 30px rgba(0,0,0,.45), 0 2px 0 rgba(255,255,255,.06) inset;
+            ">
+- Start with the "trailer": 5–10 seconds of instant vibe
+- Build a vertical slice (UI → logic → DB → output)
+- Make it touch-first and mobile-correct
+- Add "alive" polish: sound, motion, transitions
+- Instrument: logs + user friction notes
+- Harden: structure, security, CSP-safe assets (if needed)
+- Package: share links, screenshots, mini trailer, roadmap
+            </div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>Favorite outcome:</b> a weird, compelling product that feels like it came from the future…
+          but is built with practical web tech and can ship today.
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: ANTI-PATTERNS SECTION -->
+    <section class="lifted variantA stage" data-stage="" style="margin-top: 14px; --delay: 2.80s;">
+      <div class="cardHead">
+        <div>
+          <h2>Anti-Patterns: What FluxForge Avoids</h2>
+          <p>Things I explicitly don't do. Speed and clarity demand boundaries.</p>
+        </div>
+      </div>
+      <div class="cardBody">
+        <div class="twocol">
+          <div>
+            <details open="">
+              <summary>Tech anti-patterns <span class="chev" aria-hidden="true"></span></summary>
+              <ul>
+                <li><span class="anti">React/Vue/Angular for simple apps</span> — vanilla JS is faster to ship</li>
+                <li><span class="anti">npm install everything</span> — dependencies are debt</li>
+                <li><span class="anti">TypeScript for prototypes</span> — types slow down exploration</li>
+                <li><span class="anti">Docker for everything</span> — PHP runs anywhere already</li>
+                <li><span class="anti">Microservices day one</span> — monoliths are fine until they're not</li>
+              </ul>
+            </details>
+          </div>
+          <div>
+            <details open="">
+              <summary>Process anti-patterns <span class="chev" aria-hidden="true"></span></summary>
+              <ul>
+                <li><span class="anti">Weeks of planning before code</span> — build to learn</li>
+                <li><span class="anti">Pixel-perfect Figma first</span> — code IS the design</li>
+                <li><span class="anti">Waiting for perfect requirements</span> — ship and discover</li>
+                <li><span class="anti">Premature optimization</span> — make it work, then make it fast</li>
+                <li><span class="anti">Committee approvals</span> — move fast, ask forgiveness</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+        <div class="callout">
+          <b>The FluxForge rule:</b> If a tool or process doesn't help you ship a working demo faster, it's probably not needed yet.
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: CASE STUDIES SECTION -->
+    <section class="lifted variantB stage" data-stage="" style="margin-top: 14px; --delay: 3.15s;">
+      <div class="cardHead">
+        <div>
+          <h2>Built with FluxForge</h2>
+          <p>Real projects demonstrating the methodology in action.</p>
+        </div>
+      </div>
+      <div class="cardBody">
+        <div class="caseGrid">
+          <div class="caseCard">
+            <h4>🎯 CallCapture</h4>
+            <p>Voice bot testing tool for QA teams. Real-time call analysis, transcript generation, and issue tracking. Built for enterprise voice AI workflows.</p>
+            <span class="tag">Enterprise · Voice AI</span>
+          </div>
+          <div class="caseCard">
+            <h4>💻 VibePad</h4>
+            <p>Feature-rich code editor with theme systems, code intelligence, live preview, and project management. Built entirely with vanilla JS.</p>
+            <span class="tag">Developer Tools · Editor</span>
+          </div>
+          <div class="caseCard">
+            <h4>🎱 CV Pool</h4>
+            <p>Computer vision pool game using MediaPipe hand tracking. Play pool with your hands in mid-air. Projection-ready for real tables.</p>
+            <span class="tag">Computer Vision · Gaming</span>
+          </div>
+          <div class="caseCard">
+            <h4>⏰ TimeVampire</h4>
+            <p>Spam call interceptor that wastes scammers' time with AI-powered conversations. Turn the tables on robocallers.</p>
+            <span class="tag">Voice AI · Consumer</span>
+          </div>
+          <div class="caseCard">
+            <h4>🎳 CV Bowling</h4>
+            <p>Gesture-controlled bowling game. Swing your arm to bowl. Physics simulation meets hand tracking for arcade-style fun.</p>
+            <span class="tag">Computer Vision · Gaming</span>
+          </div>
+          <div class="caseCard">
+            <h4>🔐 InviteGate</h4>
+            <p>Access control system for protecting apps with invite codes. Drop-in solution for gating content during beta or private launches.</p>
+            <span class="tag">SaaS · Security</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERABLES SECTION -->
+    <section class="lifted variantD stage" data-stage="" style="margin-top: 14px; --delay: 3.50s;">
+      <div class="cardHead">
+        <div>
+          <h2>Deliverables</h2>
+          <p>When I'm done with a phase, I leave behind artifacts that let the project continue without guessing.</p>
+        </div>
+      </div>
+      <div class="cardBody">
+        <div class="twocol">
+          <div>
+            <details open="">
+              <summary>MVP deliverables <span class="chev" aria-hidden="true"></span></summary>
+              <ul>
+                <li>Single-file or clean multi-file build (HTML/CSS/JS/PHP as needed)</li>
+                <li>Working DB schema + seed scripts (if applicable)</li>
+                <li>Core flow working end-to-end</li>
+                <li>Basic polish: spacing, icons, responsive layout</li>
+              </ul>
+            </details>
+          </div>
+          <div>
+            <details open="">
+              <summary>V2/V3 deliverables <span class="chev" aria-hidden="true"></span></summary>
+              <ul>
+                <li>Performance + preloading strategies</li>
+                <li>Analytics dashboards + event tracking</li>
+                <li>Admin tools, moderation, safety rails</li>
+                <li>Monetization hooks (tiers, limits, rewards, referrals)</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: CTA SECTION -->
+    <section class="lifted variantC stage" data-stage="" style="margin-top: 14px; --delay: 3.85s;">
+      <div class="ctaSection">
+        <h2>Let's Build Something</h2>
+        <p>Got an idea? Need a rapid prototype? Want to collaborate?</p>
+        <div class="ctaLinks">
+          <a href="https://checkoutmyvibes.com/" class="ctaBtn primary">🚀 View Portfolio</a>
+          <a href="https://thomaslee.tech/" class="ctaBtn">💼 thomaslee.tech</a>
+        </div>
+        <div class="footer" style="margin-top:24px;">© <span id="year">2026</span> Thomas R. Lee — <span class="method">FLUXFORGE™</span> Method</div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Theme Switcher -->
+  <div class="themeSwitcher">
+    <button class="themeBtn active" data-t="cocoa" title="Cocoa"></button>
+    <button class="themeBtn" data-t="graphite" title="Graphite"></button>
+    <button class="themeBtn" data-t="forest" title="Forest"></button>
+    <button class="themeBtn" data-t="royal" title="Royal"></button>
+    <button class="themeBtn" data-t="midnight" title="Midnight"></button>
+  </div>
+
+  <script>
+    (function(){
+      const $ = (sel, root=document) => root.querySelector(sel);
+      const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+      const params = new URLSearchParams(location.search);
+
+      // Theme via URL param (default cocoa)
+      const theme = (params.get("theme") || "cocoa").toLowerCase().trim();
+      const allowedThemes = ["midnight","graphite","forest","royal","cocoa"];
+      const finalTheme = allowedThemes.includes(theme) ? theme : "cocoa";
+      document.documentElement.setAttribute("data-theme", finalTheme);
+
+      // Update active theme button
+      function updateThemeButtons(){
+        const current = document.documentElement.getAttribute("data-theme");
+        $$(".themeBtn").forEach(btn => {
+          btn.classList.toggle("active", btn.dataset.t === current);
+        });
+      }
+      updateThemeButtons();
+
+      // Theme switcher click handlers
+      $$(".themeBtn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.documentElement.setAttribute("data-theme", btn.dataset.t);
+          updateThemeButtons();
+        });
+      });
+
+      // Wave speed percent
+      let wavePct = parseFloat(params.get("wave"));
+      if (!Number.isFinite(wavePct)) wavePct = 42;
+      wavePct = Math.max(1, Math.min(100, wavePct));
+      const waveState = { pct: wavePct };
+
+      // Year
+      $("#year").textContent = new Date().getFullYear();
+
+      const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const intro = $("#intro");
+
+      function showUIImmediately(){
+        const stages = $$("[data-stage]");
+        stages.forEach(el => {
+          el.style.opacity = 1;
+          el.style.transform = "none";
+          el.style.animation = "none";
+        });
+      }
+
+      function attachSnakeAnim(cfg){
+        const { pathEl, n1, n2, n3, boltEl, w, h } = cfg;
+        if (!pathEl) return;
+        
+        const left = 20, right = w - 20;
+        const baseY0 = Math.round(h * 0.72);
+        const baseAmp = cfg.amp ?? 6;
+        const freq = cfg.freq ?? 0.10;
+        const baseSpeed = cfg.speed ?? 0.0048;
+        const samples = cfg.samples ?? 26;
+
+        function yAt(x, t){
+          const phase = t * baseSpeed * (waveState.pct / 100);
+          return baseY0 + baseAmp * Math.sin((x * freq) - phase);
+        }
+
+        function boltPath(t){
+          const bx = left + (right-left) * 0.64;
+          const by = yAt(bx, t) - 28;
+          const p1 = [bx, by];
+          const p2 = [bx - 15, by + 24];
+          const p3 = [bx + 4,  by + 24];
+          const p4 = [bx - 10, by + 56];
+          return `M ${p1[0].toFixed(2)} ${p1[1].toFixed(2)} L ${p2[0].toFixed(2)} ${p2[1].toFixed(2)} L ${p3[0].toFixed(2)} ${p3[1].toFixed(2)} L ${p4[0].toFixed(2)} ${p4[1].toFixed(2)}`;
+        }
+
+        let start = null;
+        function frame(ts){
+          if (!start) start = ts;
+          const t = (ts - start);
+
+          const dx = (right - left) / (samples - 1);
+          const pts = [];
+          for (let i=0;i<samples;i++){
+            const x = left + i*dx;
+            pts.push([x, yAt(x, t)]);
+          }
+
+          let d = `M ${pts[0][0].toFixed(2)} ${pts[0][1].toFixed(2)}`;
+          for (let i=1;i<pts.length-1;i++){
+            const cx = pts[i][0].toFixed(2);
+            const cy = pts[i][1].toFixed(2);
+            const mx = ((pts[i][0] + pts[i+1][0]) / 2).toFixed(2);
+            const my = ((pts[i][1] + pts[i+1][1]) / 2).toFixed(2);
+            d += ` Q ${cx} ${cy} ${mx} ${my}`;
+          }
+          const last = pts[pts.length-1];
+          d += ` T ${last[0].toFixed(2)} ${last[1].toFixed(2)}`;
+
+          pathEl.setAttribute("d", d);
+
+          const midX = left + (right-left) * 0.5;
+          if (n1) {
+            n1.setAttribute("cx", left.toFixed(2));
+            n1.setAttribute("cy", yAt(left, t).toFixed(2));
+          }
+          if (n2) {
+            n2.setAttribute("cx", midX.toFixed(2));
+            n2.setAttribute("cy", yAt(midX, t).toFixed(2));
+          }
+          if (n3) {
+            n3.setAttribute("cx", right.toFixed(2));
+            n3.setAttribute("cy", yAt(right, t).toFixed(2));
+          }
+
+          if (boltEl) boltEl.setAttribute("d", boltPath(t));
+
+          requestAnimationFrame(frame);
+        }
+
+        requestAnimationFrame(frame);
+      }
+
+      if (reduced){
+        if (intro) intro.style.display = "none";
+        showUIImmediately();
+        return;
+      }
+
+      // header wave
+      attachSnakeAnim({
+        pathEl: $("#hdrPath"),
+        n1: $("#hdrN1"),
+        n2: $("#hdrN2"),
+        n3: $("#hdrN3"),
+        boltEl: $("#hdrBolt"),
+        w: 280,
+        h: 70,
+        amp: 4.6,
+        freq: 0.095,
+        speed: 0.0048,
+        samples: 28
+      });
+
+      // intro wave
+      attachSnakeAnim({
+        pathEl: $("#introPath"),
+        n1: $("#introN1"),
+        n2: $("#introN2"),
+        n3: $("#introN3"),
+        boltEl: $("#introBolt"),
+        w: 340,
+        h: 90,
+        amp: 6.0,
+        freq: 0.082,
+        speed: 0.0048,
+        samples: 30
+      });
+
+      // Intro + staged reveal
+      const INTRO_MS = 3000;
+      window.setTimeout(() => {
+        if (intro){
+          intro.classList.add("introFadeOut");
+          window.setTimeout(() => { intro.style.display = "none"; }, 520);
+        }
+
+        const total = 4.20;
+        const stages = $$("[data-stage]");
+        const count = Math.max(1, stages.length);
+        const step = total / (count + 1);
+
+        stages.forEach((el, i) => {
+          const d = (i + 1) * step;
+          el.style.setProperty("--delay", d.toFixed(2) + "s");
+        });
+      }, INTRO_MS);
+
+    })();
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d65e70af8bcf074',t:'MTc3MjUxMjE5MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;" src="./fluxforge_files/saved_resource.html"></iframe><script defer="" src="./fluxforge_files/v67327c56f0bb4ef8b305cae61679db8f1769101564043" integrity="sha512-rdcWY47ByXd76cbCFzznIcEaCN71jqkWBBqlwhF1SY7KubdLKZiEGeP7AyieKZlGP9hbY/MhGrwXzJC/HulNyg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;9c2b0ded155b412c9a0a5f467f55f6ed&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+</body></html>
