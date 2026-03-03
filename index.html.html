@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thomas Lee — Software Developer</title>
+<meta name="description" content="Software Developer. 200+ apps in 9 months. AI Voice Systems at UnitedHealth Group. Creator of the FluxForge rapid development methodology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#3a3028;--bg2:#2e2620;--bg-deep:#1a1510;
+--panel:#2e3e3e;--panel2:#263434;--panel-deep:#1e2c2c;--panel-hl:#384848;
+--bevel-light:#4a5a58;--bevel-dark:#1a2626;
+--border-outer:#4a3e30;--border-inner:#223a38;
+--text:#f0e8d8;--text2:#c0b498;--text3:#8a7e68;--text4:#5e5444;
+--amber:#f0a830;--amber2:#f4c050;--amber-dark:#c08820;
+--orange:#d45a28;--orange2:#e86830;
+--olive:#6a7a38;--olive2:#88a048;
+--teal-accent:#5a9898;--teal-light:#78b0a8;
+--red:#c04030;--red2:#e04838;
+--cream:#f0e4c8;
+--bitter:'Bitter',serif;--sans:'DM Sans',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;
+background-image:radial-gradient(ellipse at 30% 20%,rgba(90,70,50,0.3) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(60,50,40,0.3) 0%,transparent 50%)}
+body::before{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");background-size:512px}
+::selection{background:rgba(240,168,48,0.35);color:#fff}
+a{color:var(--amber);text-decoration:none;transition:color .2s}a:hover{color:var(--amber2)}
+.container{max-width:1000px;margin:0 auto;padding:0 24px}
+@media(max-width:640px){.container{padding:0 14px}}
+
+/* Icons */
+.ico{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;flex-shrink:0}
+.ico svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ico-lg{width:28px;height:28px}
+.ico-sm{width:16px;height:16px}
+
+.header-bar{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,#3a4a48,#2e3e3c);border-bottom:3px solid var(--border-outer);box-shadow:0 4px 16px rgba(0,0,0,.5)}
+.header-inner{max-width:1000px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
+.header-logo{display:flex;align-items:center;gap:10px}
+.header-dots{display:flex;gap:6px}
+.header-dot{width:14px;height:14px;border-radius:4px;box-shadow:inset 0 1px 2px rgba(0,0,0,.4),0 1px 0 rgba(255,255,255,.1)}
+.header-dot.amber{background:linear-gradient(135deg,#f0a830,#c08820)}
+.header-dot.red{background:linear-gradient(135deg,#c04030,#902820)}
+.header-logo-text{font-family:var(--mono);font-size:15px;font-weight:800;color:var(--cream);letter-spacing:.06em}
+.header-nav{display:flex;gap:4px}
+.header-nav a{padding:8px 18px;font-size:13px;font-weight:700;color:var(--text2);border-radius:8px;transition:all .2s;border:1px solid transparent}
+.header-nav a:hover{background:rgba(255,255,255,.05);color:var(--text);border-color:rgba(255,255,255,.08)}
+.header-nav .nav-cta{background:linear-gradient(135deg,var(--amber),var(--orange));color:#1a1510;border:none;font-weight:800;box-shadow:0 2px 8px rgba(240,168,48,.25)}
+.header-nav .nav-cta:hover{filter:brightness(1.1);color:#1a1510}
+@media(max-width:640px){.header-nav a:not(.nav-cta){display:none}.header-inner{padding:12px 14px}}
+
+.tab-bar{max-width:1000px;margin:16px auto 0;padding:0 24px}
+.tab-row{display:flex;border-radius:10px;overflow:hidden;box-shadow:0 0 0 2px var(--border-outer),0 4px 12px rgba(0,0,0,.3)}
+.tab-item{flex:1;padding:12px 0;text-align:center;font-size:13px;font-weight:700;color:var(--text2);cursor:pointer;transition:all .2s;border:none;font-family:var(--sans);letter-spacing:.02em;background:linear-gradient(180deg,var(--panel),var(--panel-deep));border-right:1px solid var(--bevel-dark);display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.tab-item:last-child{border-right:none}
+.tab-item:hover{background:var(--panel-hl);color:var(--text)}
+.tab-item.active{background:linear-gradient(180deg,var(--orange),#b84820);color:var(--cream);text-shadow:0 1px 2px rgba(0,0,0,.3)}
+
+.hero{padding:40px 0 32px}
+.hero-panel{display:grid;grid-template-columns:1fr 1fr;gap:3px;border-radius:14px;overflow:hidden;box-shadow:0 0 0 3px var(--border-outer),0 8px 30px rgba(0,0,0,.4)}
+.hero-main{background:linear-gradient(180deg,var(--panel),var(--panel-deep));padding:40px 36px;grid-row:span 2;border-right:2px solid var(--bevel-dark)}
+.hero-eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--amber);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.hero-eyebrow::before{content:'●';font-size:8px;color:var(--olive2);animation:blink 2s ease infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-name{font-family:var(--bitter);font-size:42px;font-weight:900;line-height:1.05;letter-spacing:-.02em;margin-bottom:16px;color:var(--cream)}
+.hero-name .muted{color:var(--text3);font-weight:400;font-size:36px}
+.hero-desc{font-size:16px;color:var(--text2);line-height:1.6;margin-bottom:24px}
+.hero-desc strong{color:var(--amber);font-weight:700}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;font-size:13px;font-weight:800;border-radius:8px;cursor:pointer;border:2px solid;font-family:var(--sans);transition:all .2s;letter-spacing:.02em}
+.btn-primary{background:linear-gradient(135deg,var(--amber),var(--orange));color:#1a1510;border-color:var(--amber-dark);box-shadow:0 3px 12px rgba(240,168,48,.25),inset 0 1px 0 rgba(255,255,255,.2)}
+.btn-primary:hover{filter:brightness(1.1);transform:translateY(-1px);color:#1a1510}
+.btn-secondary{background:var(--panel-deep);color:var(--text2);border-color:var(--bevel-dark);box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+.btn-secondary:hover{border-color:var(--amber);color:var(--amber)}
+
+.hero-stat-box{background:linear-gradient(180deg,var(--panel),var(--panel-deep));padding:24px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.hero-stat-num{font-family:var(--mono);font-size:38px;font-weight:800;color:var(--amber);line-height:1;text-shadow:0 0 20px rgba(240,168,48,.15)}
+.hero-stat-label{font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:6px}
+.hero-stat-box:nth-child(2){border-bottom:2px solid var(--bevel-dark)}
+@media(max-width:700px){.hero-panel{grid-template-columns:1fr}.hero-main{border-right:none;border-bottom:2px solid var(--bevel-dark)}.hero-stat-box{flex-direction:row;gap:12px;padding:16px 24px}}
+
+section{padding:24px 0}
+.section-header{background:linear-gradient(180deg,#384846,#2e3c3a);border-radius:10px 10px 0 0;padding:12px 20px;border:2px solid var(--bevel-dark);border-bottom:none;box-shadow:0 0 0 2px var(--border-outer);display:flex;align-items:center;justify-content:space-between}
+.section-header-title{font-family:var(--mono);font-size:13px;font-weight:800;color:var(--cream);text-transform:uppercase;letter-spacing:.1em;display:flex;align-items:center;gap:8px}
+.section-header-badge{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:.06em}
+.section-body{background:linear-gradient(180deg,var(--panel-deep),#182828);border-radius:0 0 10px 10px;padding:24px;border:2px solid var(--bevel-dark);border-top:none;box-shadow:0 0 0 2px var(--border-outer),0 6px 20px rgba(0,0,0,.3);margin-bottom:20px}
+
+.builds-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+.build-card{background:linear-gradient(180deg,var(--panel),var(--panel-deep));border:2px solid var(--bevel-dark);border-radius:10px;padding:24px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 4px 12px rgba(0,0,0,.3);transition:all .3s;position:relative;overflow:hidden;border-top:3px solid var(--bevel-dark)}
+.build-card:nth-child(1){border-top-color:var(--orange)}.build-card:nth-child(2){border-top-color:var(--amber)}.build-card:nth-child(3){border-top-color:var(--teal-accent)}.build-card:nth-child(4){border-top-color:var(--olive)}.build-card:nth-child(5){border-top-color:var(--red)}.build-card:nth-child(6){border-top-color:var(--amber2)}
+.build-card:hover{transform:translateY(-3px);border-top-width:4px}
+.build-card-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;border:1px solid rgba(255,255,255,.08)}
+.build-card-icon svg{width:20px;height:20px;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.build-card:nth-child(1) .build-card-icon{background:rgba(212,90,40,.15);border-color:rgba(212,90,40,.25)}
+.build-card:nth-child(1) .build-card-icon svg{stroke:var(--orange2)}
+.build-card:nth-child(2) .build-card-icon{background:rgba(240,168,48,.12);border-color:rgba(240,168,48,.2)}
+.build-card:nth-child(2) .build-card-icon svg{stroke:var(--amber)}
+.build-card:nth-child(3) .build-card-icon{background:rgba(90,152,152,.15);border-color:rgba(90,152,152,.25)}
+.build-card:nth-child(3) .build-card-icon svg{stroke:var(--teal-accent)}
+.build-card:nth-child(4) .build-card-icon{background:rgba(106,122,56,.15);border-color:rgba(106,122,56,.25)}
+.build-card:nth-child(4) .build-card-icon svg{stroke:var(--olive2)}
+.build-card:nth-child(5) .build-card-icon{background:rgba(192,64,48,.12);border-color:rgba(192,64,48,.2)}
+.build-card:nth-child(5) .build-card-icon svg{stroke:var(--red2)}
+.build-card:nth-child(6) .build-card-icon{background:rgba(240,192,80,.12);border-color:rgba(240,192,80,.2)}
+.build-card:nth-child(6) .build-card-icon svg{stroke:var(--amber2)}
+.build-name{font-family:var(--bitter);font-size:18px;font-weight:800;color:var(--cream);margin-bottom:6px}
+.build-desc{font-size:13px;color:var(--text2);line-height:1.55}
+.build-tag{display:inline-block;margin-top:14px;padding:4px 12px;border-radius:6px;font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;box-shadow:inset 0 1px 2px rgba(0,0,0,.3)}
+.build-card:nth-child(1) .build-tag{background:rgba(212,90,40,.2);color:var(--orange2);border:1px solid rgba(212,90,40,.3)}
+.build-card:nth-child(2) .build-tag{background:rgba(240,168,48,.15);color:var(--amber);border:1px solid rgba(240,168,48,.25)}
+.build-card:nth-child(3) .build-tag{background:rgba(90,152,152,.15);color:var(--teal-accent);border:1px solid rgba(90,152,152,.25)}
+.build-card:nth-child(4) .build-tag{background:rgba(106,122,56,.2);color:var(--olive2);border:1px solid rgba(106,122,56,.3)}
+.build-card:nth-child(5) .build-tag{background:rgba(192,64,48,.15);color:var(--red2);border:1px solid rgba(192,64,48,.25)}
+.build-card:nth-child(6) .build-tag{background:rgba(240,192,80,.15);color:var(--amber2);border:1px solid rgba(240,192,80,.25)}
+
+.flux-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:10px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--bevel-dark)}
+.flux-step{background:linear-gradient(180deg,var(--panel),var(--panel-deep));padding:28px 16px;text-align:center;transition:all .3s;border-top:3px solid transparent}
+.flux-step:nth-child(1){border-top-color:var(--orange)}.flux-step:nth-child(2){border-top-color:var(--amber)}.flux-step:nth-child(3){border-top-color:var(--olive)}.flux-step:nth-child(4){border-top-color:var(--red)}
+.flux-step:hover{background:var(--panel-hl)}
+.flux-num{font-family:var(--mono);font-size:36px;font-weight:800;opacity:.3;color:var(--cream);margin-bottom:10px}
+.flux-title{font-family:var(--bitter);font-size:15px;font-weight:800;color:var(--cream);margin-bottom:6px}
+.flux-desc{font-size:12px;color:var(--text2);line-height:1.5;opacity:.7}
+@media(max-width:700px){.flux-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:440px){.flux-grid{grid-template-columns:1fr}}
+
+.stack-grid{display:flex;gap:10px;flex-wrap:wrap}
+.stack-item{padding:12px 22px;background:linear-gradient(180deg,var(--panel),var(--panel-deep));border:2px solid var(--bevel-dark);border-radius:8px;font-family:var(--mono);font-size:13px;font-weight:700;color:var(--text2);transition:all .25s;cursor:default;box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 2px 6px rgba(0,0,0,.2)}
+.stack-item:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+.stack-dim{color:var(--text4);font-weight:400;margin-left:6px;font-size:10px}
+
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.contact-card{background:linear-gradient(180deg,var(--panel),var(--panel-deep));border:2px solid var(--bevel-dark);border-radius:10px;padding:22px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 3px 10px rgba(0,0,0,.25);transition:all .25s;display:flex;align-items:flex-start;gap:14px}
+.contact-card:hover{border-color:var(--amber);transform:translateY(-2px)}
+.contact-card-ico{width:32px;height:32px;border-radius:8px;background:rgba(240,168,48,.08);border:1px solid rgba(240,168,48,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-card-ico svg{width:16px;height:16px;stroke:var(--amber);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact-label{font-size:10px;font-weight:700;color:var(--text4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px}
+.contact-value{font-size:14px;font-weight:700;color:var(--cream)}
+
+.status-bar{max-width:1000px;margin:16px auto 0;padding:0 24px}
+.status-row{background:linear-gradient(180deg,#263434,#1e2c2c);border-radius:10px;padding:12px 20px;border:2px solid var(--bevel-dark);box-shadow:0 0 0 2px var(--border-outer),0 4px 12px rgba(0,0,0,.3);font-family:var(--mono);font-size:13px;font-weight:700;color:var(--olive2);display:flex;align-items:center;gap:10px}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--olive2);box-shadow:0 0 8px var(--olive2);animation:blink 2s ease infinite}
+
+footer{margin-top:16px;padding:20px 0;text-align:center;font-size:12px;color:var(--text4);border-top:2px solid var(--border-outer)}
+
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="header-bar"><div class="header-inner">
+<div class="header-logo"><div class="header-dots"><div class="header-dot amber"></div><div class="header-dot red"></div></div><span class="header-logo-text">THOMAS LEE</span></div>
+<div class="header-nav"><a href="#projects">Projects</a><a href="#fluxforge">FluxForge</a><a href="#stack">Stack</a><a href="#contact" class="nav-cta">Get in Touch</a></div>
+</div></div>
+
+<div class="tab-bar"><div class="tab-row">
+<button class="tab-item active" onclick="scrollTo('#hero')"><span class="ico ico-sm" style="color:currentColor"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>Profile</button>
+<button class="tab-item" onclick="scrollTo('#projects')"><span class="ico ico-sm" style="color:currentColor"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Projects</button>
+<button class="tab-item" onclick="scrollTo('#fluxforge')"><span class="ico ico-sm" style="color:currentColor"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>FluxForge</button>
+<button class="tab-item" onclick="scrollTo('#contact')"><span class="ico ico-sm" style="color:currentColor"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>Contact</button>
+</div></div>
+
+<section class="hero" id="hero"><div class="container">
+<div class="hero-panel reveal">
+<div class="hero-main">
+<div class="hero-eyebrow">Software Developer — Online</div>
+<h1 class="hero-name">Thomas Lee<br><span class="muted">builds things.</span></h1>
+<p class="hero-desc">After 17 years in enterprise software — from product strategy to hands-on development — I created <strong>FluxForge</strong>, a rapid development methodology that turns ideas into production-quality apps at unprecedented speed.</p>
+<div class="hero-actions"><a href="#projects" class="btn btn-primary">See What I've Built →</a><a href="#contact" class="btn btn-secondary">Get in Touch</a></div>
+</div>
+<div class="hero-stat-box"><div class="hero-stat-num">200+</div><div class="hero-stat-label">Apps Built</div></div>
+<div class="hero-stat-box" style="display:flex;flex-direction:row;gap:32px;">
+<div style="text-align:center"><div class="hero-stat-num" style="font-size:28px">9 <span style="font-size:14px;color:var(--text3)">mo</span></div><div class="hero-stat-label">Sprint</div></div>
+<div style="text-align:center"><div class="hero-stat-num" style="font-size:28px">17 <span style="font-size:14px;color:var(--text3)">yr</span></div><div class="hero-stat-label">Enterprise</div></div>
+</div></div>
+</div></section>
+
+<section id="projects"><div class="container">
+<div class="section-header reveal"><div class="section-header-title"><span class="ico ico-sm" style="color:var(--amber)"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>Featured Projects</div><div class="section-header-badge">6 shipped</div></div>
+<div class="section-body reveal"><div class="builds-grid">
+<div class="build-card">
+<div class="build-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+<div class="build-name">VaultSpin</div><div class="build-desc">Enterprise-grade password management with biometric auth, encrypted vaults, and team sharing.</div><div class="build-tag">Cybersecurity</div></div>
+<div class="build-card">
+<div class="build-card-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.32 1.6.58 2.37a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.77.26 1.56.45 2.37.58A2 2 0 0 1 22 16.92z"/><line x1="23" y1="1" x2="17" y2="7"/><line x1="17" y1="1" x2="23" y2="7"/></svg></div>
+<div class="build-name">TimeVampire</div><div class="build-desc">AI-powered spam call interceptor that deploys voice agents to waste scammers' time.</div><div class="build-tag">Voice AI</div></div>
+<div class="build-card">
+<div class="build-card-icon"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+<div class="build-name">CallCapture</div><div class="build-desc">Voice bot testing and QA tool for enterprise teams. Record, replay, analyze at scale.</div><div class="build-tag">Enterprise</div></div>
+<div class="build-card">
+<div class="build-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="14.31" y1="8" x2="20.05" y2="17.94"/><line x1="9.69" y1="8" x2="21.17" y2="8"/><line x1="7.38" y1="12" x2="13.12" y2="2.06"/><line x1="9.69" y1="16" x2="3.95" y2="6.06"/><line x1="14.31" y1="16" x2="2.83" y2="16"/><line x1="16.62" y1="12" x2="10.88" y2="21.94"/></svg></div>
+<div class="build-name">CallLabs</div><div class="build-desc">Experimental voice sandbox for testing new agent architectures and interaction patterns.</div><div class="build-tag">Voice AI</div></div>
+<div class="build-card">
+<div class="build-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+<div class="build-name">BrandForge</div><div class="build-desc">AI content generator for personal branding across LinkedIn, X, and Threads.</div><div class="build-tag">AI-Native</div></div>
+<div class="build-card">
+<div class="build-card-icon"><svg viewBox="0 0 24 24"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></div>
+<div class="build-name">CV Games</div><div class="build-desc">Bowling, pool, and arcade games controlled by hand gestures via webcam computer vision.</div><div class="build-tag">Experimental</div></div>
+</div></div>
+</div></section>
+
+<section id="fluxforge"><div class="container">
+<div class="section-header reveal"><div class="section-header-title"><span class="ico ico-sm" style="color:var(--amber)"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>FluxForge Methodology</div><div class="section-header-badge"><a href="https://fluxforge.dev" target="_blank" style="color:var(--amber)">fluxforge.dev →</a></div></div>
+<div class="section-body reveal">
+<p style="font-size:15px;color:var(--text2);line-height:1.6;margin-bottom:20px">A rapid development methodology that combines AI-assisted coding with pragmatic engineering. No framework bloat. No over-architecture. Just shipping.</p>
+<div class="flux-grid">
+<div class="flux-step"><div class="flux-num">01</div><div class="flux-title">Build Fast</div><div class="flux-desc">Idea to prototype in hours, not weeks</div></div>
+<div class="flux-step"><div class="flux-num">02</div><div class="flux-title">Feel Real</div><div class="flux-desc">Sound, motion, and polish from day one</div></div>
+<div class="flux-step"><div class="flux-num">03</div><div class="flux-title">Prove Outcomes</div><div class="flux-desc">Ship to users, gather feedback, iterate</div></div>
+<div class="flux-step"><div class="flux-num">04</div><div class="flux-title">Harden</div><div class="flux-desc">Production-grade with auth, payments, admin</div></div>
+</div></div>
+</div></section>
+
+<section id="stack"><div class="container">
+<div class="section-header reveal"><div class="section-header-title"><span class="ico ico-sm" style="color:var(--amber)"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Tech Stack</div><div class="section-header-badge">Pragmatic choices</div></div>
+<div class="section-body reveal"><div class="stack-grid">
+<div class="stack-item">JavaScript<span class="stack-dim">Vanilla</span></div>
+<div class="stack-item">PHP</div><div class="stack-item">MySQL</div><div class="stack-item">WebRTC</div>
+<div class="stack-item">AI APIs</div><div class="stack-item">Voice / IVR</div>
+<div class="stack-item">Computer Vision</div><div class="stack-item">HTML / CSS</div>
+</div></div>
+</div></section>
+
+<section id="contact"><div class="container">
+<div class="section-header reveal"><div class="section-header-title"><span class="ico ico-sm" style="color:var(--amber)"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Connect</div><div class="section-header-badge">Let's talk</div></div>
+<div class="section-body reveal"><div class="contact-grid">
+<a href="https://www.linkedin.com/in/thomas-lee-dev" class="contact-card" target="_blank">
+<div class="contact-card-ico"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+<div><div class="contact-label">LinkedIn</div><div class="contact-value">/in/thomas-lee-dev</div></div></a>
+<a href="https://twitter.com/TommyLeeDev" class="contact-card" target="_blank">
+<div class="contact-card-ico"><svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></div>
+<div><div class="contact-label">X / Twitter</div><div class="contact-value">@TommyLeeDev</div></div></a>
+<a href="https://checkoutmyvibes.com" class="contact-card" target="_blank">
+<div class="contact-card-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+<div><div class="contact-label">Portfolio</div><div class="contact-value">checkoutmyvibes.com</div></div></a>
+<a href="mailto:tommy@thomaslee.tech" class="contact-card">
+<div class="contact-card-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+<div><div class="contact-label">Email</div><div class="contact-value">tommy@thomaslee.tech</div></div></a>
+</div></div>
+</div></section>
+
+<div class="status-bar"><div class="status-row reveal"><div class="status-dot"></div><span id="statusText"></span></div></div>
+<footer><div style="max-width:1000px;margin:0 auto;padding:0 24px">© 2025 Thomas Lee. Built with vanilla JS, obviously.</div></footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver(e=>{e.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60);observer.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+reveals.forEach(el=>observer.observe(el));
+function scrollTo(s){document.querySelector(s)?.scrollIntoView({behavior:'smooth'})}
+document.querySelectorAll('a[href^="#"]').forEach(l=>{l.addEventListener('click',e=>{e.preventDefault();scrollTo(l.getAttribute('href'))})});
+const tabs=document.querySelectorAll('.tab-item'),secs=['#hero','#projects','#fluxforge','#contact'];
+window.addEventListener('scroll',()=>{let c=0;secs.forEach((s,i)=>{const el=document.querySelector(s);if(el&&window.scrollY>=el.offsetTop-120)c=i});tabs.forEach((t,i)=>t.classList.toggle('active',i===c))});
+const now=new Date(),ts=now.toISOString().replace('T',' ').slice(0,19);
+document.getElementById('statusText').textContent='('+ts+') All systems operational. Last deploy: thomaslee.tech';
+</script>
+</body>
+</html>
